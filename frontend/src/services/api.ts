@@ -8,7 +8,10 @@ import type {
   StartSessionOptions,
 } from '../types';
 
-const API_BASE = 'http://localhost:8080';
+// API base URL - configurable via VITE_API_BASE env var (Vite exposes VITE_* vars via import.meta.env)
+// For local development, defaults to localhost:8080
+// For production deployment, set VITE_API_BASE to the deployed backend URL (e.g., https://api.example.com)
+const API_BASE = import.meta.env.VITE_API_BASE ?? 'http://localhost:8080';
 
 async function post<T>(path: string, body: unknown, errorMsg: string): Promise<T> {
   const response = await fetch(`${API_BASE}${path}`, {
