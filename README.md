@@ -80,30 +80,35 @@ flowchart TD
 
 <div align="center">
 
-| | |
-| :---: | :---: |
-| ![Level Select](images/2.png) | ![Mission Briefing](images/3.png) |
-| **Level Select** — All 4 missions unlocked, progression badges per mode | **Mission Briefing** — Context, objectives, solo/team guides |
+| | | |
+| :---: | :---: | :---: |
+| ![Landing](images/1.png) | ![Mode Select](images/2.png) | ![Level Select](images/3.png) |
+| **Landing** — Mission entry, mode choice, progression overview | **Mode Select** — Solo vs. Team with role preview | **Level Select** — 4 unlocked missions, solo/team badges |
 
-| | |
-| :---: | :---: |
-| ![Gameplay Solo](images/4.png) | ![Gameplay Team](images/5.png) |
-| **Solo Gameplay** — 3-column layout: Problems • Neural Network • Solutions | **Team Gameplay** — Role bar, shared state, consensus confirmation |
+| | | |
+| :---: | :---: | :---: |
+| ![Mission Briefing](images/4.png) | ![Gameplay Solo](images/5.png) | ![HUD](images/6.png) |
+| **Mission Briefing** — Context, objectives, solo/team guides | **Gameplay Solo** — 3-column layout: Problems · Neural Network · Solutions | **HUD** — Accuracy, Energy, Brain Health, Time, Score |
 
-| | |
-| :---: | :---: |
-| ![Problem Details](images/6.png) | ![Solution Preview](images/7.png) |
-| **Problem Details** — Threat level, description, recommended solutions, focus tag | **Action Preview** — Energy cost, expected impact, risk, educational note |
+| | | |
+| :---: | :---: | :---: |
+| ![Problem Navigator](images/7.png) | ![Solution Cards](images/8.png) | ![Neural Network](images/9.png) |
+| **Problem Navigator** — 7 pipeline problems, threat levels, states | **Solution Cards** — 17 cards, energy/time cost, expected impact | **Neural Network** — React Flow DAG, live node energy, connections |
 
-| | |
-| :---: | :---: |
-| ![Neural Network](images/8.png) | ![Results Screen](images/9.png) |
-| **Neural Network Visualization** — React Flow DAG, live node energy, connections | **Results Screen** — Final metrics, action log, export button |
+| | | |
+| :---: | :---: | :---: |
+| ![Problem Details](images/10.png) | ![Action Preview](images/11.png) | ![Neural Network Close-up](images/12.png) |
+| **Problem Details** — Threat level, description, recommended solutions | **Action Preview** — Energy cost, expected impact, risk, educational note | **Neural Network Close-up** — Node energy %, importance, health |
 
-| | |
-| :---: | :---: |
-| ![Educational Insight](images/10.png) | ![XLSX Export](images/11.png) |
-| **Educational Insight Popup** — Real-world application context after correct solve | **Research XLSX** — 5 sheets: Summary, Challenge, Action Log, Event Log, Metrics |
+| | | |
+| :---: | :---: | :---: |
+| ![Gameplay Team](images/13.png) | ![TeamBar](images/14.png) | ![Results Screen](images/15.png) |
+| **Gameplay Team** — Shared state, TeamBar, consensus modal | **TeamBar** — 4 roles: Data Analyst, ML Engineer, Security Analyst, Team Lead | **Results Screen** — Final metrics, action log, export button |
+
+| | | |
+| :---: | :---: | :---: |
+| ![Results Metrics](images/16.png) | ![Educational Insight](images/17.png) | ![XLSX Export](images/18.png) |
+| **Results Metrics** — Accuracy, Brain Health, Energy, Score, Success Rate | **Educational Insight** — Real-world context after correct solve | **XLSX Export** — 5-sheet workbook: Summary, Challenge, Action Log, Event Log, Metrics |
 
 </div>
 
@@ -660,21 +665,28 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## Screenshot Index (Placeholders)
+## Screenshot Index
 
 | # | File | Screen | Caption |
 |---|------|--------|---------|
-| 1 | `images/1.png` | Landing | Mission entry, mode selection, progression overview |
-| 2 | `images/2.png` | Level Select | 4 unlocked missions, solo/team badges, best accuracy |
-| 3 | `images/3.png` | Mission Briefing | Context, objectives, solo/team guides, start button |
-| 4 | `images/4.png` | Gameplay (Solo) | 3-column layout: Problems / Neural Network / Solutions |
-| 5 | `images/5.png` | Gameplay (Team) | TeamBar with roles, pending-decision modal |
-| 6 | `images/6.png` | Problem Details | Threat level, description, recommended solutions, focus |
-| 7 | `images/7.png` | Action Preview | Energy cost, expected impact, risk, educational note |
-| 8 | `images/8.png` | Neural Network | React Flow DAG, live node energy, connection health |
-| 9 | `images/9.png` | Results Screen | Final metrics, action log, export button, continue |
-| 10 | `images/10.png` | Educational Insight | Real-world context popup after correct solve |
-| 11 | `images/11.png` | XLSX Export | 5-sheet workbook open in Excel/LibreOffice |
+| 1 | `images/1.png` | Landing | Mission entry, mode choice (Solo/Team), progression overview |
+| 2 | `images/2.png` | Mode Select | Solo vs. Team with role preview, continuation button |
+| 3 | `images/3.png` | Level Select | 4 unlocked missions, solo/team badges, best accuracy |
+| 4 | `images/4.png` | Mission Briefing | Context, objectives, solo/team guides, Play Mission button |
+| 5 | `images/5.png` | Gameplay (Solo) | 3-column layout: Problems / Neural Network / Solutions |
+| 6 | `images/6.png` | HUD | Accuracy, Energy, Brain Health, Time, Score, Target progress |
+| 7 | `images/7.png` | Problem Navigator | 7 pipeline problems with threat levels, states, expected impact |
+| 8 | `images/8.png` | Solution Cards | 17 cards with energy/time cost, expected impact, drag-to-apply |
+| 9 | `images/9.png` | Neural Network | React Flow DAG, 5 nodes, live energy %, connections, training status |
+| 10 | `images/10.png` | Problem Details | Threat level, description, recommended solutions, focus tag |
+| 11 | `images/11.png` | Action Preview | Energy cost, time cost, expected impact, risk, educational note |
+| 12 | `images/12.png` | Neural Network Close-up | Node energy %, importance, health, training/inference state |
+| 13 | `images/13.png` | Gameplay (Team) | Shared state, TeamBar, consensus confirmation modal |
+| 14 | `images/14.png` | TeamBar | 4 roles: Data Analyst, ML Engineer, Security Analyst, Team Lead |
+| 15 | `images/15.png` | Results Screen | Final metrics, action log, export button, continue to next level |
+| 16 | `images/16.png` | Results Metrics | Accuracy, Brain Health, Energy, Score, Success Rate, Solved/Total |
+| 17 | `images/17.png` | Educational Insight | Real-world context after correct solve (feature toggleable) |
+| 18 | `images/18.png` | XLSX Export | 5-sheet workbook: Summary, Challenge, Action Log, Event Log, Metrics |
 
 > **Add screenshots** by placing PNG files in `images/` with numeric names above. The README references them via relative paths — no absolute URLs.
 
