@@ -1,0 +1,131 @@
+# Neural Forge - Git Ignore Rules
+
+# ============================================================
+# Root-level generated / local files
+# ============================================================
+neural_shield.db
+*.log
+*.err.log
+.env
+.env.local
+.env.*.local
+
+# ============================================================
+# Python / Backend
+# ============================================================
+# Bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+env/
+.venv/
+virtualenv/
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Node / Frontend
+# ============================================================
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+frontend/build/
+
+# Vite / bundler cache
+frontend/.vite/
+frontend/.esbuild/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# ============================================================
+# GitHub Actions / CI artifacts (local runs)
+# ============================================================
+.github/workflows/*.yml.bak
+.github/workflows/*.yaml.bak
+
+# ============================================================
+# Database / Data files (generated at runtime)
+# ============================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# ============================================================
+# Documentation / screenshots (user-populated, not generated)
+# ============================================================
+# images/  <-- DO NOT IGNORE: user adds screenshots here
+# README.md  <-- DO NOT IGNORE: main documentation
+
+# ============================================================
+# Test artifacts (backend)
+# ============================================================
+backend/*.pyc
+backend/__pycache__/
+backend/.pytest_cache/
+backend/server.log
+backend/server.err.log
+
+# ============================================================
+# Local development overrides (never commit)
+# ============================================================
+*.local
+*.override
+local_settings.py
+settings_local.py

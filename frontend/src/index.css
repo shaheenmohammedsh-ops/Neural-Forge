@@ -1,0 +1,790 @@
+@import "tailwindcss";
+
+@theme {
+  /* Scientific Color System */
+  --color-primary-dark: #0a0e1a;
+  --color-primary-charcoal: #111827;
+  --color-accent-cyan: #0ea5e9;
+  --color-accent-blue: #3b82f6;
+  --color-secondary-purple: #7c3aed;
+  --color-positive-green: #10b981;
+  --color-warning-amber: #f59e0b;
+  --color-critical-red: #ef4444;
+  --color-neutral-gray: #6b7280;
+  --color-neutral-light: #9ca3af;
+  
+  /* Subtle shadows for depth */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-large: 0 10px 15px rgba(0, 0, 0, 0.5);
+  
+  /* Professional animation timings */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 400ms;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--color-primary-dark);
+  color: #e5e7eb;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Professional Animation System */
+@keyframes float-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes success-flash {
+  0% {
+    background-color: rgba(16, 185, 129, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes error-flash {
+  0% {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.float-up {
+  animation: float-up 0.8s ease-out forwards;
+}
+
+.fade-in {
+  animation: fade-in var(--transition-normal) ease-out;
+}
+
+.slide-up {
+  animation: slide-up var(--transition-normal) ease-out;
+}
+
+.subtle-pulse {
+  animation: subtle-pulse 2s ease-in-out infinite;
+}
+
+.success-flash {
+  animation: success-flash 0.3s ease-out;
+}
+
+.error-flash {
+  animation: error-flash 0.3s ease-out;
+}
+
+/* Professional panel styling */
+.panel {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 8px;
+}
+
+.panel-subtle {
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  border-radius: 6px;
+}
+
+/* Subtle Neural Network Animations */
+@keyframes connection-flow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -8;
+  }
+}
+
+@keyframes node-breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes node-drift {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(1.5px, -2px);
+  }
+  50% {
+    transform: translate(-1px, 1.5px);
+  }
+  75% {
+    transform: translate(1px, 1px);
+  }
+}
+
+.node-drift {
+  animation: node-drift 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes node-recovery {
+  0% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes node-warning {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.connection-active {
+  animation: connection-flow 1s linear infinite;
+}
+
+.node-healthy {
+  animation: node-breathing 3s ease-in-out infinite;
+}
+
+.node-recovering {
+  animation: node-recovery 0.5s ease-out;
+}
+
+.node-warning {
+  animation: node-warning 1.5s ease-in-out infinite;
+}
+
+/* Typography Scale */
+.text-mission-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.text-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.text-metric {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.text-body {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-button {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.text-micro {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Utility classes for consistent spacing */
+.spacing-tight {
+  letter-spacing: -0.01em;
+}
+
+.spacing-normal {
+  letter-spacing: 0;
+}
+
+.spacing-wide {
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   Gameplay UI redesign (compact 3-zone layout)
+   ============================================================ */
+
+/* Animated mission background */
+.neuro-bg {
+  background:
+    radial-gradient(1200px 700px at 70% -10%, rgba(14, 165, 233, 0.16), transparent 60%),
+    radial-gradient(1000px 700px at 0% 110%, rgba(124, 58, 237, 0.14), transparent 60%),
+    radial-gradient(800px 600px at 100% 90%, rgba(59, 130, 246, 0.10), transparent 55%),
+    #0a0e1a;
+  /* Cheaper than hue-rotate: the aurora only breathes opacity on pre-baked
+     gradients, so the browser never re-rasterizes the layer's colors. */
+  animation: neuro-aurora 22s ease-in-out infinite alternate;
+}
+
+@keyframes neuro-aurora {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.82;
+  }
+}
+
+.neuro-grid {
+  background-image:
+    linear-gradient(rgba(100, 116, 139, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 116, 139, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, #000 30%, transparent 78%);
+  /* Static grid: background-position animation forces continuous repaints. */
+}
+
+.neuro-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(72px);
+  opacity: 0.16;
+  will-change: transform;
+}
+
+.neuro-blob-a {
+  animation: blob-a 26s ease-in-out infinite;
+}
+
+.neuro-blob-b {
+  animation: blob-b 32s ease-in-out infinite;
+}
+
+.neuro-blob-c {
+  animation: blob-c 38s ease-in-out infinite;
+}
+
+@keyframes blob-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(70px, 40px) scale(1.12); }
+}
+
+@keyframes blob-b {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  50% { transform: translate(-60px, 50px) scale(0.92); }
+}
+
+@keyframes blob-c {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  50% { transform: translate(50px, -45px) scale(1.1); }
+}
+
+.neuro-particle {
+  position: absolute;
+  top: 100%;
+  border-radius: 9999px;
+  animation-name: particle-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes particle-rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.55;
+  }
+  85% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+.neuro-vignette {
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(4, 7, 15, 0.72) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neuro-bg,
+  .neuro-grid,
+  .neuro-blob-a,
+  .neuro-blob-b,
+  .neuro-blob-c,
+  .neuro-particle,
+  .connection-active,
+  .node-healthy,
+  .node-warning,
+  .screen-enter,
+  .screen-exit,
+  .stagger > *,
+  .debrief-bar,
+  .cinem-bars-top,
+  .cinem-bars-bottom,
+  .cinem-flash,
+  .cine-veil-enter,
+  .cine-veil-exit,
+  .cine-bar-in-top,
+  .cine-bar-in-bottom,
+  .cine-bar-out,
+  .boot-bar,
+  .level-card-available,
+  .pop-in,
+  .glow-in,
+  .slide-up,
+  .fade-in {
+    animation: none !important;
+  }
+}
+
+/* Micro-interactions */
+@keyframes pop-in {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-in {
+  animation: pop-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-press:active {
+  transform: scale(0.975);
+}
+
+.nav-row:active {
+  transform: scale(0.985);
+}
+
+@keyframes glow-in {
+  from {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.45);
+  }
+  to {
+    box-shadow: 0 0 0 5px rgba(14, 165, 233, 0);
+  }
+}
+
+.glow-in {
+  animation: glow-in 0.45s ease-out;
+}
+
+/* Slim scrollbars for panels */
+.slim-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.slim-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slim-scroll::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.35);
+  border-radius: 9999px;
+}
+
+.slim-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.55);
+}
+
+.slim-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.35) transparent;
+}
+
+/* ============================================================
+   Cinematic design system
+   ============================================================ */
+
+/* Mission level accent system (matches backend LEVELS 1-4) */
+@theme {
+  --level-1: #0ea5e9;
+  --level-2: #8b5cf6;
+  --level-3: #f59e0b;
+  --level-4: #ef4444;
+}
+
+/* Cinematic screen transitions */
+@keyframes screen-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes screen-exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px) scale(1.005);
+  }
+}
+
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.screen-enter {
+  animation: screen-enter 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.screen-exit {
+  animation: screen-exit 0.22s ease-in both;
+}
+
+.screen-overlay {
+  animation: overlay-fade 0.2s ease-out both;
+}
+
+/* Cinematic letterbox bars */
+@keyframes bars-in-top {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes bars-in-bottom {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes bars-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes cinem-flash {
+  0% { opacity: 0; }
+  30% { opacity: 0.55; }
+  70% { opacity: 0.35; }
+  100% { opacity: 0; }
+}
+
+.cinem-bars-top {
+  animation: bars-in-top 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cinem-bars-bottom {
+  animation: bars-in-bottom 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cinem-bars-exit {
+  animation: bars-out 0.18s ease-in both;
+}
+
+.cinem-flash {
+  animation: cinem-flash 0.28s ease-out both;
+}
+
+/* Subtle fast route transition (used by CinematicTransition) */
+@keyframes cine-veil-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cine-veil-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.cine-veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(4, 7, 15, 0.55) 100%);
+}
+
+.cine-veil-enter {
+  animation: cine-veil-in 0.12s ease-out both;
+}
+
+.cine-veil-exit {
+  animation: cine-veil-out 0.22s ease-out both;
+}
+
+.cine-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2.5vh;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.55), transparent);
+}
+
+.cine-bar-top {
+  top: 0;
+}
+
+.cine-bar-bottom {
+  bottom: 0;
+}
+
+@keyframes cine-bar-in-top {
+  from { transform: translateY(-110%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes cine-bar-in-bottom {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes cine-bar-out {
+  from { opacity: 0.9; transform: scaleY(1); }
+  to { opacity: 0; transform: scaleY(0.3); }
+}
+
+.cine-bar-in-top {
+  animation: cine-bar-in-top 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cine-bar-in-bottom {
+  animation: cine-bar-in-bottom 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cine-bar-out {
+  animation: cine-bar-out 0.22s ease-in both;
+}
+
+/* Boot bar for near-instant session start (no spinner) */
+@keyframes boot-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.boot-bar {
+  animation: boot-bar 0.9s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.letterbox-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: #060a14;
+  transform: translateX(0);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.letterbox-top {
+  top: 0;
+  height: 5vh;
+}
+
+.letterbox-bottom {
+  bottom: 0;
+  height: 5vh;
+}
+
+.letterbox-visible .letterbox-bar {
+  transform: translateX(0);
+}
+
+/* Staggered reveal helper */
+.stagger > * {
+  opacity: 0;
+  animation: slide-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.12s; }
+.stagger > *:nth-child(3) { animation-delay: 0.19s; }
+.stagger > *:nth-child(4) { animation-delay: 0.26s; }
+.stagger > *:nth-child(5) { animation-delay: 0.33s; }
+.stagger > *:nth-child(6) { animation-delay: 0.4s; }
+.stagger > *:nth-child(7) { animation-delay: 0.47s; }
+.stagger > *:nth-child(8) { animation-delay: 0.54s; }
+
+/* Gradient headline text */
+.text-gradient-cyan {
+  background: linear-gradient(120deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-violet {
+  background: linear-gradient(120deg, #a78bfa, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary / ghost buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, filter 0.2s ease;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 28px rgba(14, 165, 233, 0.4);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-ghost {
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(75, 85, 99, 0.6);
+  color: #d1d5db;
+  border-radius: 0.6rem;
+  transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(148, 163, 184, 0.8);
+  background: rgba(17, 24, 39, 0.85);
+}
+
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+
+/* Mission card lock reveal */
+@keyframes lock-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+.lock-shake {
+  animation: lock-shake 0.3s ease-in-out;
+}
+
+/* Level select card glow ring */
+@keyframes level-card-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 14px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.level-card-available {
+  animation: level-card-glow 3s ease-in-out infinite;
+}
+
+/* Debrief reveal bars */
+@keyframes debrief-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.debrief-bar {
+  transform-origin: left;
+  animation: debrief-bar 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Fast, responsive press feedback (80-150ms) */
+.pressable {
+  transition: transform 0.1s ease, filter 0.15s ease, box-shadow 0.2s ease;
+}
+
+.pressable:active {
+  transform: scale(0.965);
+}
+
+.pressable-light:active {
+  transform: scale(0.98);
+}
+
+/* Spring-like interactive ease (150-250ms selection) */
+.animate-spring {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease,
+    border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.animate-spring:hover {
+  transform: translateY(-1px);
+}
+
+/* Focus visibility for keyboard users */
+:focus-visible {
+  outline: 2px solid rgba(14, 165, 233, 0.6);
+  outline-offset: 2px;
+}
