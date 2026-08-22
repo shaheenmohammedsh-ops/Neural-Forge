@@ -100,16 +100,6 @@ flowchart TD
 | ![Problem Details](images/10.png) | ![Action Preview](images/11.png) | ![Neural Network Close-up](images/12.png) |
 | **Problem Details** — Threat level, description, recommended solutions | **Action Preview** — Energy cost, expected impact, risk, educational note | **Neural Network Close-up** — Node energy %, importance, health |
 
-| | | |
-| :---: | :---: | :---: |
-| ![Gameplay Team](images/13.png) | ![TeamBar](images/14.png) | ![Results Screen](images/15.png) |
-| **Gameplay Team** — Shared state, TeamBar, consensus modal | **TeamBar** — 4 roles: Data Analyst, ML Engineer, Security Analyst, Team Lead | **Results Screen** — Final metrics, action log, export button |
-
-| | | |
-| :---: | :---: | :---: |
-| ![Results Metrics](images/16.png) | ![Educational Insight](images/17.png) | ![XLSX Export](images/18.png) |
-| **Results Metrics** — Accuracy, Brain Health, Energy, Score, Success Rate | **Educational Insight** — Real-world context after correct solve | **XLSX Export** — 5-sheet workbook: Summary, Challenge, Action Log, Event Log, Metrics |
-
 </div>
 
 ---
@@ -681,12 +671,6 @@ MIT License — see [LICENSE](LICENSE) for details.
 | 10 | `images/10.png` | Problem Details | Threat level, description, recommended solutions, focus tag |
 | 11 | `images/11.png` | Action Preview | Energy cost, time cost, expected impact, risk, educational note |
 | 12 | `images/12.png` | Neural Network Close-up | Node energy %, importance, health, training/inference state |
-| 13 | `images/13.png` | Gameplay (Team) | Shared state, TeamBar, consensus confirmation modal |
-| 14 | `images/14.png` | TeamBar | 4 roles: Data Analyst, ML Engineer, Security Analyst, Team Lead |
-| 15 | `images/15.png` | Results Screen | Final metrics, action log, export button, continue to next level |
-| 16 | `images/16.png` | Results Metrics | Accuracy, Brain Health, Energy, Score, Success Rate, Solved/Total |
-| 17 | `images/17.png` | Educational Insight | Real-world context after correct solve (feature toggleable) |
-| 18 | `images/18.png` | XLSX Export | 5-sheet workbook: Summary, Challenge, Action Log, Event Log, Metrics |
 
 > **Add screenshots** by placing PNG files in `images/` with numeric names above. The README references them via relative paths — no absolute URLs.
 
